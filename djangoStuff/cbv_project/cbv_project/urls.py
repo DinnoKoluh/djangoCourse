@@ -18,7 +18,9 @@ from django.urls import path, include
 from cbv_app import views
 
 urlpatterns = [
-    path('', views.CBView.as_view()),
-    #path('', views.index, name='index'),
+    #path('', views.CBView.as_view()), # calling class base view
+    #path('', views.index, name='index'), # calling function base view
+    path('', views.IndexView.as_view()), # calling template view
+    path('cbv_app/', include('cbv_app.urls')),
     path('admin/', admin.site.urls),
 ]

@@ -1,0 +1,26 @@
+{% extends "cbv_app/cbv_app_base.html" %}
+
+{% block body_block %}
+
+<div class="jumbotron">
+    <h1> Welcome to School Detail Page! </h1>
+    <h2> School details: </h2>
+
+    <p>Name: {{ school_detail.name }}</p>
+    <p>Principal: {{ school_detail.principal }}</p>
+    <p>Location: {{school_detail.location}}</p>
+
+    <h3>Students</h3>
+    <!-- .students.all the related name inside models.py in the foreign key -->
+    {% for student in school_detail.students.all %}
+        <p>{{student.name}} is {{ student.age }} years old. </p>
+    {% endfor %}
+</div>
+
+<ol>
+    {% for school in schools %}
+        <h2><li>{{school.name}}</li></h2>
+    {% endfor %}
+</ol>
+
+{% endblock %}
