@@ -1,10 +1,12 @@
 from django.shortcuts import render
 # for class base view
-from django.views.generic import View, TemplateView, ListView, DetailView
+from django.views.generic import View, TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from django.http import HttpResponse
 
 from cbv_app import models
+# for deleting
+from django.urls import reverse_lazy
 # Create your views here.
 
 # def index(request):
@@ -42,3 +44,19 @@ class SchoolDetailView(DetailView):
     template_name = 'cbv_app/school_detail.html'
 
     context_object_name = 'school_detail'
+
+# a class to create a view/to add new users/info to database
+class SchoolCreateView(CreateView):
+    fields = ('name', 'principal', 'location')
+    model = models.School
+    template_name = 'cbv_app/create_school.html'
+
+class SchoolUpdateView(UpdateView):
+    fields = ('name', 'principal')
+    model = models.School
+    template_name = 'cbv_app/create_school.html'
+
+class SchoolDeleteView(DeleteView):
+    model = models.School
+    success_url = reverse_lazy('cbv_app:list')
+    template_name = 'cbv_app/school_delete.html'

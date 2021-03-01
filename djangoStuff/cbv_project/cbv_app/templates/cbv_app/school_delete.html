@@ -1,0 +1,17 @@
+{% extends "cbv_app/cbv_app_base.html" %}
+
+{% block body_block %}
+
+<h1> Delete {{school.name}}? </h1>
+
+<div class="container">
+    <form method="post">
+        If you are sure that you want to delete the school, click Delete! <br>
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger" value="Delete">
+    </form>
+    <br>
+    <p>Go back to the school detail page!</p> 
+    <a href="{% url 'cbv_app:detail' pk=school.pk %}"> <input type="submit"  class="btn btn-primary" value="Details"> </a>
+</div>
+{% endblock %}

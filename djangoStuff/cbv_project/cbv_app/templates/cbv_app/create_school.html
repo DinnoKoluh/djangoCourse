@@ -1,0 +1,24 @@
+{% extends "cbv_app/cbv_app_base.html"%}
+
+{% block body_block %}
+    <h1>
+        <!-- Checking if the primary key of the school exists, if it doesnt create a new school -->
+        {% if not form.instance.pk %}
+            Create School
+        {% else %}
+            Update School
+        {% endif %}
+    </h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if not form.instance.pk %}
+            <input type="submit" class="btn btn-primary" value="Create">
+        {% else %}
+            <input type="submit" class="btn btn-primary" value="Update">
+        {% endif %}
+        
+    </form>
+
+{% endblock %}
