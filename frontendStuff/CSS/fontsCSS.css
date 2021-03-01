@@ -1,0 +1,70 @@
+h1{
+    font-family: 'Reggae One', cursive; 
+}
+
+p{
+    font-family: monospace;
+}
+
+body{
+    font-size: 20px;
+}
+
+#two{
+    /* em ratio between body font size and everything else */
+    font-family: 'Ballet', cursive;
+    font-size: 1.4em;  
+}
+
+p{
+    font-style: italic;
+    font-weight: 900;
+}
+
+h1{
+    text-align: center;
+}
+
+/* css font stack - to check what fonts for which OSs are available
+   google fonts - to download different types of fonts to have it locally  */
+
+ #top{
+    border: 3mm solid black;
+    width: 25%;
+    /* margin: 1px 2px 3px 4px; */
+    margin: auto;
+ }  
+
+ #bot{
+    border: 1mm dashed blueviolet;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 10mm;
+ }
+
+ #first{
+     text-align: center;
+     background: blueviolet;
+     height: 10cm;
+     width: 5cm;
+     
+ }
+
+ #second{
+    text-align: center;
+    background: red;
+    height: 10cm;
+    width: 1cm;
+ }
+
+ .tab{
+     margin: auto;
+ }
+
+ /* #firstP{
+     text-align: center;
+     width: 50%;
+     background-color: brown;
+     margin: 100px 102px 10px 10px;
+ }  */

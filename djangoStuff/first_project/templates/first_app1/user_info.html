@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Info Page</title>
+    </head>
+
+    <body>
+        
+        {% if user_info_key %}
+        <ol>
+            {% for usr in user_info_key %}
+            <li> User info
+                <ul> 
+                <li>First name: {{ usr.f_name }} </li>
+                <li>Last name: {{ usr.l_name }} </li>
+                <li>Email: {{ usr.email }} </li>
+                </ul>
+            </li>
+            {% endfor %}
+        </ol>
+        {% else %}
+        <p> Something wrong. Look up the dictionary key</p>
+        {% endif %}
+    </body>
+</html>

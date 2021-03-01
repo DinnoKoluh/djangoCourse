@@ -1,0 +1,18 @@
+p{
+    color: rgb(27, 163, 118);
+}
+
+.div1{
+    background-color: blueviolet;
+    border-color: brown;
+    border-width: 1mm;
+    border-style: solid;
+}
+
+#anId{
+    color:crimson;
+}
+
+body{
+    background-color: gainsboro;
+}

@@ -1,0 +1,45 @@
+/* A comment in css */
+/*
+selected tag {
+  property: value; 
+} */
+
+
+body {
+  /*background-color: gray;*/
+  background: url(https://uiaa-web.azureedge.net/wp-content/uploads/2017/12/2018_banner.jpg);
+  background-repeat: no-repeat;
+}
+
+.firstDiv {
+  color: black;
+  background-color: gray;
+  border-color: blue;
+  border-width: 0.1cm; /* or ex. 10 px*/
+  border-style: dotted;
+}
+
+.secondDiv {
+  color: blue;
+  background-color: red;
+}
+
+#justOne {
+  color: purple;
+}
+
+span {
+  background-color: yellow;
+}
+
+h1 {
+  color: blue;
+}
+
+li {
+  color: rgb(80, 94, 1); /* rgb code  --> rgba --< a is a number [0,1] that identifies the shading of the color*/
+}
+
+p {
+  color: #1201a456; /* hex code */
+}

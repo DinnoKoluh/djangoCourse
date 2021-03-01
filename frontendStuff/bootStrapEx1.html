@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap link -->
+        <link rel="stylesheet" href="CSS/bootStrapCssEx1.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Bootstrap!</h1>
+
+        <div class="container">
+            <h1>Hello World!</h1>
+            <button type="button" class="btn btn-success btn-lg" name="button1"> Click me! </button>
+            <button type="button" class="btn btn-success btn-lg" disabled="disabled" name="button2"> You cannot click me! </button>
+        </div>
+
+        <div id="toCen" class="container">
+            <div class="card" style="width: 18rem;">
+                <img src="boxmodel.png" class="card-img-top" alt="figure not available">
+                <div class="card-body">
+                  <h5 class="card-title">A picutre of a box model</h5>
+                  <p id="someText" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="https://www.facebook.com" class="btn btn-primary">Go To Facebook</a>
+                </div>
+              </div>
+        </div>
+
+        <div class="container">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="file" class="form-control-file" name="text" value=" file">
+            </form>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">Company</a>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Item 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Item 2</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <!-- The head contains the info about the page, css, and so on -->
+  <head>
+    <meta charset="utf-8">
+    <title>This is the title!</title>
+  </head>
+
+  <!-- The body contains the content of the page itself-->
+  <!-- The shortcut for a comment is ctrl+/ -->
+  <body>
+      <!-- A heading  -->
+      <h1> This is a heading 1!</h1>
+      <h2> Heading 2 </h2>
+
+      <p> A paragraph about something</p>
+      <!-- To get filler text just type lorem -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <!-- Old way of bolding and italizing text: -->
+      <p><i>This is italic text</i></p>
+      <p><b>This is bold text</b></p>
+
+      <!-- New way of doing it is bold -> strong and italic -> em (emphesize) -->
+      <p><strong> This is bold</strong></p>
+      <p><em>This is italic</em></p>
+
+      <!-- Lists -> ordered and unordered -->
+      <ol>
+        <li>Dinno</li>
+        <li>Koluh</li>
+      </ol>
+
+      <ul>
+        <li>Dinno</li>
+        <li>Koluh</li>
+      </ul>
+
+      <!-- Divs and Spans -> div (allows to tag together groups of elements (will be used extensively with CSS)
+      is division and spans  -->
+
+      <div class="div1">
+        <h1>Heading Inside a division</h1>
+        <h2>This <span>inside a span tag</span> is inside too</h2>
+      </div>
+
+      <!-- Images - source and alternate
+      Called a self-closing tag-->
+      <img src="RRT1.svg" alt="a picture of an RRT" onclick="www.stackoverflow.com" >
+
+      <!-- "a" - anchor tag references an html link  -->
+      <a href="C:\Users\pc\OneDrive - Faculty of Electrical Engineering Sarajevo\Desktop\ETF materijali\5. semseter - Ireland\Internet of Things\MAIN_CODE\WebPage.html"> Yo wanna se some nasty bithces. Click me!</a>
+      <a href="http://www.stackoverflow.com"> <img src="RRT1.svg" alt=""></a>
+
+
+      <!-- TABELS  -->
+      <table border="2">
+        <!-- table head -->
+        <thead>
+              <!-- table head names -->
+              <th>Head 1</th>
+              <th>Head 2</th>
+              <th>Head 3</th>
+        </thead>
+
+        <!-- table row -->
+        <tr>
+          <!-- table cells -->
+          <td> 150 </td>
+          <td> 250 </td>
+          <td> 350 </td>
+        </tr>
+
+        <tr>
+          <td> Yoo </td>
+        </tr>
+      </table>
+
+      <!-- HTML forms - to input data from the user  -->
+      <form action="https://facebook.com" method="get">
+        <input id="useremail" type="email" name="useremail" placeholder="Enter your email" required>
+
+        <label for="useremail"> Enter text: </label>
+
+        <label>
+          <input type="password" name="pass" value="Enter your password">
+        </label>
+        <input type="color" name="" value="Select color">
+        <input type="submit" name="" value="Submit data.">
+      </form>
+
+
+
+      <form method="get">
+        <label for="input1">First input</label>
+        <input id="input1" type="radio" name="radioInput" value="Enter1">
+
+        <label for="input2">Second input</label>
+        <input id="input2" type="radio" name="radioInput" value="Enter2">
+
+        <select name="stars">
+          <option value="Great">3</option>
+          <option value="Ok">2</option>
+          <option value="Bad">1</option>
+        </select>
+
+        <textarea name="textA" rows="8" cols="80"></textarea>
+        <input type="submit" name="sub1" value="Submit me.">
+      </form>
+
+  </body>
+</html>

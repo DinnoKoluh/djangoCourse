@@ -1,0 +1,14 @@
+.btn{
+    font-family: monospace;
+    color: black !important;
+    font-weight: 900 !important;
+    background-color: blue;
+}
+
+#someText{
+    text-align: center;
+}
+
+#toCen{
+    text-align: center;
+}

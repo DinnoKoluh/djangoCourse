@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        
+        <title> FORMS </title>
+    </head>
+
+    <body>
+        
+        <h1> Fill out the form! </h1>
+        <div class = "container">
+            <form method="post">
+                <!-- Requests that each form widget to be inside a paragraph tag so they go from top to bottom -->
+                {{form.as_p}}
+                
+                <!-- some shit about security that django needs to have in oreder to work -->
+                {% csrf_token %} 
+                <input type="submit" class = "btn btn-primary" value = "Submit">
+            </form>
+            
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1> Welcome to Relative URL Templates Page! </h1>      
+        <!-- URL TEMPLATE TAGGING -->
+        <!-- making a relative path  temp_app comes from the urls.py app_name = 'temp_name', and 'other' is the name = 'other in urls.py'-->
+        <a href="{% url 'temp_app:other'  %}"> The Other Page! </a>  
+        <a href="{% url 'admin:index' %}"> Admin Page! </a>
+        <a href="{% url 'index' %}">Go To Index Page! </a>
+    </body>
+</html>

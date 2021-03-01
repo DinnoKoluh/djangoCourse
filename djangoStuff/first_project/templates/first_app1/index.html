@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- loading static files here with template tagging -->
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- inserting css with template tagging from django -->
+        <link rel="stylesheet" href="{% static "css/mystyle.css"%}">
+        
+        <title>My First Django App</title>
+    </head>
+
+    <body>
+        <h1> Hello this is index.html</h1>
+        <!-- django template tag syntax -->
+        <!-- {{insert_me}}  -->
+        <h1> A picture of some other, happier times </h1>
+        <img src="{% static "images/dinno.jpg" %}" alt="wrong file path name, or picture name">
+
+        <div class = "django1">
+            <!-- if the access_records key existst inside the dictionary in views.py file -->
+            {% if access_records %}
+
+            <table>
+                <thead>
+                    <th> Site name </th>
+                    <th> Date accessed</th>
+                </thead>
+
+                {% for acc in access_records %}  <!-- django template syntax to loop through with the key access_record through webpages in views.py -->
+                <tr>
+                    <td> {{ acc.name }} </td>
+                    <td> {{ acc.date }} </td>
+                </tr>
+                {% endfor %} <!-- Ending the for loop  -->
+
+            </table>
+            
+            {% else %}
+            <p> No Access Record found</p>
+            
+            {% endif %}
+
+        </div>
+    </body>
+</html>
