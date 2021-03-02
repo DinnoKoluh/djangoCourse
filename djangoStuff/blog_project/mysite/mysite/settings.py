@@ -122,3 +122,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = Path(BASE_DIR, 'static')
 
 LOGIN_REDIRECT_URL = '/'
+
+LOGOUT_REDIRECT_URL = '/'
