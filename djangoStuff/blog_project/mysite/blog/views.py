@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 #
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 from blog.models import Post, Comment
-from blog.forms import PostForm, CommentForm
+from blog.forms import PostForm, CommentForm, UserForm
 
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin # something like a decorator we used before for a page where the login was required
@@ -86,3 +86,24 @@ def comment_remove(request, pk):
     post_pk = comment.post.pk
     comment.delete()
     return redirect('post_detail', pk=post_pk) # no need to asign a new variable because I deleted the comment
+
+def register(request):
+    registered = False
+
+    if request.method == 'POST':
+        user_form = UserForm(data=request.POST)
+
+        if user_form.is_valid():
+            user = user_form.save()
+            user.set_password(user.password) # hashing the password
+            user.save()
+            registered = True
+        else:
+            print(user_form.errors)
+    else:
+        user_form = UserForm()
+
+    return render(request, 'registration/sign_up.html', {
+        'registered': registered,
+        'user_form': user_form,
+    })

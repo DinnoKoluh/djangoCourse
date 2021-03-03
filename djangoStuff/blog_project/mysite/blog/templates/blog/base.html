@@ -28,10 +28,10 @@
         <nav class="navbar navbar-default techfont custom-navbar">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li><a class="navbar-brand bigbrand" href="{% url 'post_list' %}">My Blog</a></li>
+                    <li><a class="navbar-brand bigbrand" href="{% url 'post_list' %}">Blogs</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="https://www.github.com">GitHub</a></li>
-                    <li><a href="https://www.googlemaps.com">Maps</a></li>
+                    <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.googlemaps.com " target="_blank">Maps</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -39,9 +39,10 @@
                         <li><a href="{% url 'post_new' %}">New Post</a></li>
                         <li><a href="{% url 'post_draft_list' %}">Drafts</a></li>
                         <li><a href="{% url 'logout' %}">Log Out</a></li>
-                        <li><a>Welcome {{user.username}}</a></li>
+                        <li><a>Welcome <strong>{{user.username}}</strong></a></li>
                     {% else %}
                         <li><a href="{% url 'login' %}">Login <span class="glyphicon glyphicon-user"></span></a></li>
+                        <li><a href="{% url 'signup' %}">Sign Up <span class="glyphicon glyphicon-barcode"></span></a></li>
                     {% endif %}
                 </ul>
             </div>
