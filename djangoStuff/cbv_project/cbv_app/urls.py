@@ -11,7 +11,4 @@ urlpatterns = [
     path('create', views.SchoolCreateView.as_view(), name='create'),
     path('update/<int:pk>', views.SchoolUpdateView.as_view(), name='update'), # to link primary key to html
     path('delete/<int:pk>', views.SchoolDeleteView.as_view(), name='delete'), # to link primary key to html
-
-
-
 ]
